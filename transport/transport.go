@@ -9,6 +9,7 @@ import (
 )
 
 type Callback interface {
+	Id() string
 	OnPacket(r *parser.PacketDecoder)
 	OnClose(server Server)
 }

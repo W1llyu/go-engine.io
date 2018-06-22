@@ -232,8 +232,12 @@ func (c *serverConn) OnPacket(r *parser.PacketDecoder) {
 		c.pingChan <- true
 	case parser.MESSAGE:
 		closeChan := make(chan struct{})
-		c.readerChan <- newConnReader(r, closeChan)
-		<-closeChan
+		select {
+		case <- time.After(10 * time.Second):
+			break
+		case c.readerChan <- newConnReader(r, closeChan):
+			<-closeChan
+		}
 		close(closeChan)
 		r.Close()
 	case parser.UPGRADE:
