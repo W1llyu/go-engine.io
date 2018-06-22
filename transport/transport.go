@@ -4,8 +4,8 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/googollee/go-engine.io/message"
-	"github.com/googollee/go-engine.io/parser"
+	"github.com/W1llyu/go-engine.io/message"
+	"github.com/W1llyu/go-engine.io/parser"
 )
 
 type Callback interface {

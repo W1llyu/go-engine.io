@@ -8,10 +8,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/googollee/go-engine.io/message"
-	"github.com/googollee/go-engine.io/parser"
-	"github.com/googollee/go-engine.io/polling"
-	"github.com/googollee/go-engine.io/websocket"
+	"github.com/W1llyu/go-engine.io/message"
+	"github.com/W1llyu/go-engine.io/parser"
+	"github.com/W1llyu/go-engine.io/polling"
+	"github.com/W1llyu/go-engine.io/websocket"
 	. "github.com/smartystreets/goconvey/convey"
 )
 
